@@ -1,0 +1,332 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+html {
+  background-color: #ffffff;
+}
+body {
+  background-color: #ffffff;
+  color: #333333;
+  font-family: 'Montserrat',sans-serif;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+.btn {
+  border: 0;
+  color: #ffffff;
+  padding: 0.2rem;
+}
+.btn--block {
+  display: block;
+  width: auto;
+}
+.card__wrapper {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1024px;
+}
+.card {
+  background-color: #ffffff;
+  border: 2px solid #cccccc;
+  padding: 0;
+  text-align: center;
+  height: 100%;
+}
+.cards {
+  /*display: flex;
+  flex-wrap: wrap;*/
+
+  float: left;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
+  width: 65%;
+}
+.rightside {
+  float: right;
+  padding: 0 10px;
+  width: 35%;
+}
+.cards_item {
+  float: left;
+  width: 33.33%;
+  padding-left: 15px;
+  padding-bottom: 15px;
+  width: 200px;
+  min-width: 200px;
+  position: relative;
+}
+@media (min-width: 700px) and (max-width: 1023px) {
+  .cards_item {
+    width: 33.33%;
+  }
+}
+@media (min-width: 450px) and (max-width: 699px) {
+  .cards_item {
+    width: 50%;
+  }
+}
+@media (max-width: 449px) {
+  .cards_item {
+    width: 100%;
+  }
+}
+.card {
+  background-color: white;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  justify-content: space-between;
+}
+.card:hover .card__image {
+  filter: contrast(100%);
+}
+.card__image img {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid #8d8485;
+  margin: 15px auto;
+  overflow: hidden;
+  position: relative;
+  transition: filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91);
+  width: 125px;
+  height: 125px;
+}
+.card__image::before {
+  content: "";
+  display: block;
+  /*padding-top: 56.25%;*/
+}
+@media (min-width: 40rem) {
+  .card__image::before {
+    /*padding-top: 66.6%;*/
+  }
+}
+.card__allitem {
+  float: left;
+  clear: both;
+  border-top: 1px solid #8d8485;
+  border-bottom: 1px solid #8d8485;
+  margin: 10px 0;
+  position: relative;
+  width: 100%;
+}
+.card__allitem h1 {
+  color: #8d8485;
+  font-size: 28px;
+  float: left;
+  margin: 0;
+  padding: 10px;
+}
+.card__title {
+  background-color: #efefef;
+  color: #333333;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  padding: 5px;
+  text-transform: captialize;
+  text-align: center;
+}
+.card__text {
+  flex: 1 1 auto;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+.card__btn {
+  border: 2px solid #4b9ed1;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #4b9ed1;
+  float: right;
+  font-weight: bold;
+  font-size: 10px;
+  margin-top: 28px;
+}
+.card_item_price {
+  float: left;
+  font-size: 12px;
+  width: 105px;
+  text-align: left;
+}
+.card_item_price .name {
+  color: #8d8485;
+  display: table-cell;
+  height: 30px;
+  vertical-align: bottom;
+}
+.card_item_price .price,
+.card_item_price .discount {
+  float: left;
+}
+.card_item_price .price {
+  color: #ff0000;
+  text-decoration: line-through;
+}
+.card_item_price .price .strike {
+  color: #8d8485;
+}
+.card_item_price .discount {
+  padding-left: 7px;
+}
+.card__discount {
+  background-color: #6ccf56;
+  color: #ffffff;
+  font-size: 11px;
+  padding: 3px 0;
+  position: absolute;
+  top: 17px;
+  width: 30px;
+}
+.added__cart {
+  float: left;
+  border: 0;
+  border-radius: 3px;
+  cursor: pointer;
+  left: 45%;
+  padding: 4px;
+  position: absolute;
+  width: auto;
+}
+.column__labels,
+.product__item,
+.totals-item {
+  zoom: 1;
+  font-size: 12px;
+  line-height: 25px;
+  width: 100%;
+}
+.column__labels .item-image,
+.product__item .item-image,
+.totals-item .item-image,
+.column__labels .item-qty,
+.product__item .item-qty,
+.totals-item .item-qty,
+.column__labels .item-price,
+.product__item .item-price,
+.totals-item .item-price {
+  float: left;
+  width: 50%;
+}
+.column__labels .item-image img,
+.product__item .item-image img,
+.totals-item .item-image img,
+.column__labels .item-qty img,
+.product__item .item-qty img,
+.totals-item .item-qty img,
+.column__labels .item-price img,
+.product__item .item-price img,
+.totals-item .item-price img {
+  width: 30px;
+  height: 30px;
+}
+.column__labels .item-qty,
+.product__item .item-qty,
+.totals-item .item-qty,
+.column__labels .item-price,
+.product__item .item-price,
+.totals-item .item-price {
+  width: 30%;
+  line-height: 25px;
+}
+.column__labels .item-price,
+.product__item .item-price,
+.totals-item .item-price {
+  width: 20%;
+}
+.column__labels .item-qty,
+.product__item .item-qty,
+.totals-item .item-qty {
+  text-align: center;
+}
+.column__labels .item-qty .qty,
+.product__item .item-qty .qty,
+.totals-item .item-qty .qty {
+  border: 1px solid #8d8485;
+  padding: 5px;
+  width: 20px;
+}
+.column__labels .item-qty .qty-minus,
+.product__item .item-qty .qty-minus,
+.totals-item .item-qty .qty-minus,
+.column__labels .item-qty .qty-plus,
+.product__item .item-qty .qty-plus,
+.totals-item .item-qty .qty-plus {
+  curosr: pointer;
+  font-size: 20px;
+  line-height: 25px;
+  padding: 2px;
+}
+.column__labels {
+  border-top: 1px solid #8d8485;
+  border-bottom: 1px solid #8d8485;
+  float: left;
+  margin-bottom: 10px;
+}
+.product__item {
+  float: left;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+}
+.product__item .item-image {
+  border: 1px solid #8d8485;
+  padding: 5px;
+}
+hr {
+  border-top: 1px thin #8d8485;
+}
+.card__total {
+  border: 1px solid #8d8485;
+  font-size: 12px;
+  margin: 15px 0;
+  width: 100%;
+}
+.card__total tr td {
+  padding: 5px;
+  text-align: left;
+}
+.card__total tr td:last-child {
+  text-align: right;
+}
+.card__total tr:first-child td {
+  font-weight: bold;
+  text-align: left;
+}
+.card__total tr:last-child td {
+  background-color: #efefef;
+  font-weight: bold;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .cards {
+    width: 100%;
+  }
+  .cards .cards_item {
+    padding-left: 0;
+  }
+  .cards .cards_item .card {
+    width: 190px;
+    margin: 0 auto;
+  }
+  .rightside {
+    clear: both;
+    float: left;
+    width: 100%;
+  }
+}
